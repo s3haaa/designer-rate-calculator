@@ -1,167 +1,165 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #eef1f5;
-  margin: 0;
-  padding: 0;
-  color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    background: #eef1f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
-
-
-
 .wrapper {
-  display: flex;
-  flex-direction: row;
-  max-width: 1200px;
-  margin: 40px auto;
-  background: #fff;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .column {
-  flex: 1;
-  padding: 30px;
-  box-sizing: border-box;
+    flex: 1;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
 .left {
-  background: #f7f9fc;
-  border-right: 1px solid #ddd;
+    background: #f7f9fc;
+    border-right: 1px solid #ddd;
 }
 
 .right {
-  background: #ffffff;
+    background: #ffffff;
 }
 
 h2 {
-  margin-top: 0;
-  color: #0078d4;
+    margin-top: 0;
+    color: #0078d4;
 }
 
 label {
-  display: block;
-  margin-bottom: 20px;
-  font-weight: 600;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
 #monthlyHoursRange {
-    margin-bottom:25px;
+    margin-bottom: 25px;
 }
 
-input, select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 6px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 15px;
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
 }
 
 button {
-  margin-top: 25px;
-  padding: 12px 24px;
-  background: #0078d4;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
+    margin-top: 25px;
+    padding: 12px 24px;
+    background: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 button:hover {
-  background: #005fa3;
+    background: #005fa3;
 }
 
 .info-box {
-  margin: 15px 0;
-  padding: 12px;
-  background: #e6f7ff;
-  border-left: 4px solid #0078d4;
-  font-size: 14px;
-  border-radius: 6px;
+    margin: 15px 0;
+    padding: 12px;
+    background: #e6f7ff;
+    border-left: 4px solid #0078d4;
+    font-size: 14px;
+    border-radius: 6px;
 }
 
-#results > div {
-  margin-bottom: 25px;
-  padding: 20px;
-  background: #f1f1f1;
-  border-radius: 8px;
+#results>div {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f1f1f1;
+    border-radius: 8px;
 }
 
 ul {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 footer {
-  text-align: center;
-  background: #f9f9f9;
-  font-size: 14px;
-  
-  max-width: 1200px;
-  margin: 40px auto;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  overflow: hidden;
+    text-align: center;
+    background: #f9f9f9;
+    font-size: 14px;
+
+    max-width: 1200px;
+    margin: 40px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .disclaimer {
-  color: #666;
+    color: #666;
 }
 
 .smalltext {
-    color:gray;
+    color: gray;
 
-    margin-top:15px;
+    margin-top: 15px;
 }
 
 .troskovi {
     display: grid;
     grid-template-columns: 40% 60%;
-    margin-top:10px;
+    margin-top: 10px;
     align-items: center;
 }
 
 .troskovi input {
-    display:flex;
+    display: flex;
 
 }
 
 .troskovi label {
-    margin:0;
+    margin: 0;
 }
 
 .tooltip {
-  position: relative;
-  display: inline-block;
-  margin-left: 10px;
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
 }
 
 
 .tooltip-text {
-  visibility: hidden;
-  width: 280px;
-  background-color: #333;
-  color: #fff;
-  text-align: left;
-  border-radius: 6px;
-  padding: 10px;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s;
-  font-size: 13px;
-  line-height: 1.4;
+    visibility: hidden;
+    width: 280px;
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 13px;
+    line-height: 1.4;
 }
 
 .tooltip:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
 .input-wrap {
@@ -169,16 +167,17 @@ footer {
 }
 
 .info-box {
-    margin:0;
-    margin-top:6px;
-    border:0;
-    border:1px solid white;
+    margin: 0;
+    margin-top: 6px;
+    border: 0;
+    border: 1px solid white;
 }
 
 .info-box:hover {
-    border:1px solid #58a9f8;
-
+    border: 1px solid #58a9f8;
 }
+
+
 
 @media (max-width: 800px) {
     .wrapper {
@@ -191,5 +190,51 @@ footer {
         padding-left: 30px;
         padding-right: 30px;
     }
-}
 
+    .troskovi {
+        display: block;
+    }
+
+    .input-wrap {
+        display: grid;
+        grid-template-columns: 20% 75%;
+        justify-content:space-between;
+    }
+
+    .info-box {
+        all: unset;
+    }
+
+    .info-box:hover {
+        all: unset;
+    }
+
+    .tooltip-text {
+        all: unset;
+    }
+
+    .tooltip {
+        display: flex;
+        gap:5px;
+        margin:0;
+        padding: 12px;
+        background: #e6f7ff;
+        border-left: 4px solid #0078d4;
+        font-size: 12px;
+        border-radius: 6px;
+        min-height: 50px;
+        align-items: center;
+    }
+
+    .input-wrap input {
+        margin:0;
+    }
+
+    .troskovi label {
+        margin-bottom:10px;
+    }
+
+    #calculateBtn {
+        width: 100%;
+    }
+}
