@@ -180,7 +180,7 @@ footer {
 
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 800px) {
     .wrapper {
         display: block;
         width: 100%;
@@ -192,3 +192,4 @@ footer {
         padding-right: 30px;
     }
 }
+
