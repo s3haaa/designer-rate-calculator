@@ -177,4 +177,18 @@ footer {
 
 .info-box:hover {
     border:1px solid #58a9f8;
+
+}
+
+@media (max-width: 1500px) {
+    .wrapper {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    footer {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
