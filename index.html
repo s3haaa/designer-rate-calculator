@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Designer Rate Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Lijeva kolona: Unos -->
+        <div class="column left">
+            <h2>Unos podataka</h2>
+
+            <label>Broj sati dnevno:
+                <input type="number" id="dailyHours" value="8" min="1" />
+            </label>
+
+            <label>Rad vikendom:
+                <select id="weekendWork">
+                    <option value="0">Ne</option>
+                    <option value="1">Samo jedan dan</option>
+                    <option value="2">Oba dana</option>
+                </select>
+            </label>
+
+            <div id="monthlyHoursRange" class="info-box">Aproksimativno: –</div>
+
+            <label>Država / Entitet:
+                <select id="country">
+                    <option value="FBiH">🇧🇦 BiH – Federacija BiH</option>
+                    <option value="RS">🇧🇦 BiH – Republika Srpska</option>
+                    <option value="BD">🇧🇦 BiH – Brčko Distrikt</option>
+                    <option value="HR">🇭🇷 Hrvatska</option>
+                    <option value="SRB">🇷🇸 Srbija</option>
+                    <option value="CG">🇲🇪 Crna Gora</option>
+                </select>
+            </label>
+
+            <label>Željena NETO plata (€):
+                <input type="number" id="netSalary" value="1000" min="0" />
+            </label>
+
+            <h3>Troškovi (možete prilagoditi)</h3>
+
+<div class="troskovi">
+  <label for="costBookkeeping">Knjigovođa (€):</label>
+  <div class="input-wrap">
+    <input type="number" id="costBookkeeping" value="25" min="0" />
+    <span class="tooltip">
+      <div class="info-box">ℹ️</div>
+      <span class="tooltip-text">
+        Trošak za vođenje osnovne poslovne dokumentacije, obračun poreza i doprinosa, te predaju mjesečnih izvještaja. Unosi se kao mjesečna naknada za najosnovniji paket knjigovodstvenih usluga — obično se može naći za 20–30 €.
+      </span>
+    </span>
+  </div>
+</div>
+
+<div class="troskovi">
+  <label for="costBank">Banka (€):</label>
+  <div class="input-wrap">
+    <input type="number" id="costBank" value="5" min="0" />
+    <span class="tooltip">
+      <div class="info-box">ℹ️</div>
+      <span class="tooltip-text">
+        Fiksni mjesečni trošak održavanja poslovnog računa kod banke. Obuhvata naknade za vođenje računa, bez dodatnih provizija za transakcije.
+      </span>
+    </span>
+  </div>
+</div>
+
+<div class="troskovi">
+  <label for="costSoftware">Softver i oprema (€):</label>
+  <div class="input-wrap">
+    <input type="number" id="costSoftware" value="80" min="0" />
+    <span class="tooltip">
+      <div class="info-box">ℹ️</div>
+      <span class="tooltip-text">
+        Trošak za licence (npr. Adobe Creative Cloud), osnovne alate, fontove, plugine i amortizaciju opreme (računalo, monitor, tablet). Unosi se kao prosječna mjesečna vrijednost potrebna za održavanje radne infrastrukture.
+      </span>
+    </span>
+  </div>
+</div>
+
+<div class="troskovi">
+  <label for="costMarketing">Marketing / Branding (€):</label>
+  <div class="input-wrap">
+    <input type="number" id="costMarketing" value="16.67" min="0" />
+    <span class="tooltip">
+      <div class="info-box">ℹ️</div>
+      <span class="tooltip-text">
+        Trošak za izradu i održavanje vlastite web stranice, vizuala, prisustva na društvenim mrežama i osnovne promocije. Unosi se kao mjesečna vrijednost podijeljena iz godišnjeg budžeta (~200 € godišnje).
+      </span>
+    </span>
+  </div>
+</div>
+
+<div class="troskovi">
+  <label for="costVacation">Godišnji odmor (€):</label>
+  <div class="input-wrap">
+    <input type="number" id="costVacation" value="256" min="0" />
+    <span class="tooltip">
+      <div class="info-box">ℹ️</div>
+      <span class="tooltip-text">
+        Rezerva koja osigurava prihod tokom perioda kada ne radite (npr. 20 dana godišnjeg). Računa se na osnovu minimalne dnevnice (~12.8 €), pa se unosi kao mjesečna vrijednost koja pokriva taj iznos raspoređen kroz godinu.
+      </span>
+    </span>
+  </div>
+</div>
+
+<div class="troskovi">
+  <label for="costAcquisition">Akvizicija klijenata (€):</label>
+  <div class="input-wrap">
+    <input type="number" id="costAcquisition" value="100" min="0" />
+    <span class="tooltip">
+      <div class="info-box">ℹ️</div>
+      <span class="tooltip-text">
+        Vrijeme i energija uloženi u traženje novih klijenata, komunikaciju, slanje ponuda i pitchanje projekata. Unosi se kao mjesečna vrijednost na osnovu minimalne satnice (npr. 10h x 10 €/h = 100 €).
+      </span>
+    </span>
+  </div>
+</div>
+
+<div class="troskovi">
+  <label for="costUnexpected">Neplanirani troškovi (€):</label>
+  <div class="input-wrap">
+    <input type="number" id="costUnexpected" value="50" min="0" />
+    <span class="tooltip">
+      <div class="info-box">ℹ️</div>
+      <span class="tooltip-text">
+        Rezerva za hitne i nepredviđene izdatke — kvar opreme, zamjena softvera, dodatni troškovi koji se ne mogu unaprijed planirati. Unosi se kao fiksna mjesečna vrijednost radi sigurnosti poslovanja.
+      </span>
+    </span>
+  </div>
+</div>
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <button id="calculateBtn">Izračunaj</button>
+        </div>
+
+        <!-- Desna kolona: Rezultati -->
+        <div class="column right">
+            <h2>Rezultati</h2>
+            <div id="costs"></div>
+            <div id="taxes"></div>
+            <div id="summary"></div>
+        </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <footer>
+        <p class="disclaimer" style="text-align: center; font-size: 12px;">
+            ⚠️ Napomena: Sve prikazane cifre su aproksimacije i služe samo kao gruba procjena za planiranje. Stvarni
+            troškovi i porezi mogu varirati.
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
