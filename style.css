@@ -89,7 +89,6 @@ hr {
 
 }
 
-
 .opinion-box {
     margin-top: 30px;
     padding: 15px;
@@ -320,8 +319,6 @@ footer {
     border: 1px solid #58a9f8;
 }
 
-
-
 @media (max-width: 800px) {
     .tooltip .spesl {
         margin-left:0;
@@ -389,8 +386,6 @@ footer {
         padding:10px;
     }
 
- 
-
     .info-box {
         display: block;
         align-items: center;
@@ -401,7 +396,6 @@ footer {
     .tooltip-text {
         text-align: left !important;
     }
-
 
     .tooltip {
         display: flex;
@@ -547,8 +541,6 @@ body.manual-dark hr {
     border-color: rgb(44, 44, 44);
 }
 
-
-
 body.manual-dark .opinion-box {
     background-color: #1e1e1e;
     color: #ddd;
@@ -586,7 +578,6 @@ body.manual-dark .status-excellent {
     background-color: #1c3a28;
     border-left: 4px solid #28a745;
 }
-
 
 body.manual-dark .status-low h3 {
     color: #dc3545;
