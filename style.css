@@ -6,15 +6,60 @@ body {
     color: #333;
 }
 
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 30px 0;
+}
+
 .wrapper {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     max-width: 1200px;
     margin: 40px auto;
     background: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
+}
+
+#lbl {
+    margin-bottom: 6px;
+}
+
+.currency-selector {
+    margin: 20px 0;
+}
+
+.currency-options {
+    display: flex;
+    gap: 10px;
+}
+
+.currency-btn {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    background: #ffffff;
+    color: #0078d4;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.currency-btn:hover {
+    background-color: #e6f7ff;
+    border: 1px solid #58a9f8;
+}
+
+.currency-btn.active {
+    background-color: #0078d4;
+    color: white;
+    border-color: #0078d4;
 }
 
 .column {
@@ -30,6 +75,104 @@ body {
 
 .right {
     background: #ffffff;
+}
+
+.pregled-tablica small {
+    display: block;
+    color: #888;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.desnakol {
+    text-align: right;
+
+}
+
+
+.opinion-box {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.status-low {
+    background-color: #f8d7da;
+    border-left: 4px solid #dc3545;
+}
+
+.status-ok {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+}
+
+.status-good {
+    background-color: #d1ecf1;
+    border-left: 4px solid #17a2b8;
+}
+
+.status-excellent {
+    background-color: #d4edda;
+    border-left: 4px solid #28a745;
+}
+
+.opinion-box h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.pdf-btn {
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.pdf-btn:hover {
+    background-color: #005fa3;
+}
+
+.opinion-box p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.opinion-box .disclaimer {
+    font-size: 12px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.pregled-tablica {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.pregled-tablica td {
+    font-weight: bolder;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.pregled-tablica tr:last-child td {
+    border-bottom: none;
+}
+
+.pregled-tablica td:first-child {
+    font-weight: 600;
+    color: #555;
 }
 
 h2 {
@@ -198,7 +341,7 @@ footer {
     .input-wrap {
         display: grid;
         grid-template-columns: 20% 75%;
-        justify-content:space-between;
+        justify-content: space-between;
     }
 
     .info-box {
@@ -215,8 +358,8 @@ footer {
 
     .tooltip {
         display: flex;
-        gap:5px;
-        margin:0;
+        gap: 5px;
+        margin: 0;
         padding: 12px;
         background: #e6f7ff;
         border-left: 4px solid #0078d4;
@@ -227,14 +370,190 @@ footer {
     }
 
     .input-wrap input {
-        margin:0;
+        margin: 0;
     }
 
     .troskovi label {
-        margin-bottom:10px;
+        margin-bottom: 10px;
     }
 
     #calculateBtn {
         width: 100%;
     }
+}
+
+#themeToggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    padding: 10px 14px;
+    border-radius: 50%;
+    border: none;
+    background-color: #0078d4;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s;
+}
+
+#themeToggle:hover {
+    background-color: #005fa3;
+}
+
+body.manual-dark #themeToggle {
+  background-color: #444;
+  color: #fff;
+}
+
+body.manual-dark #themeToggle:hover {
+  background-color: #666;
+}
+
+body {
+    transition: background-color 0.2s ease, color 0.3s ease;
+}
+
+body.manual-dark {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.manual-dark .left,
+body.manual-dark .right {
+    background-color: #1e1e1e;
+    color: #ccc;
+}
+
+body.manual-dark input,
+body.manual-dark select {
+    background-color: #2a2a2a;
+    color: #eee;
+    border: 1px solid #555;
+}
+
+body.manual-dark .tooltip-text {
+    background-color: #444;
+    color: #eee;
+}
+
+body.manual-dark .info-box {
+    background-color: rgb(11, 22, 31);
+    color: #ccc;
+    border-color: rgb(11, 22, 31);
+}
+
+body.manual-dark .info-box:hover {
+    border-color: rgb(0, 60, 105);
+}
+
+body.manual-dark footer {
+    background-color: #1e1e1e;
+    color: #aaa;
+}
+
+body.manual-dark footer a {
+    color: #868686;
+}
+
+body.manual-dark .currency-btn {
+    border-color: rgb(85, 85, 85);
+    background-color: rgb(30, 30, 30);
+    ;
+}
+
+body.manual-dark .currency-btn.active {
+    border-color: rgb(0, 120, 212);
+    background-color: rgb(0, 120, 212);
+}
+
+body.manual-dark .currency-btn:not(.active):hover {
+    color: rgb(0, 120, 212);
+    border-color: rgb(85, 85, 85);
+    background-color: rgb(44, 44, 44);
+}
+
+body.manual-dark .wrapper {
+    border: 0;
+}
+
+body.manual-dark .wrapper {
+    background-color: #1e1e1e;
+}
+
+body,
+html {
+    border: none;
+    outline: none;
+}
+
+body.manual-dark .column.left {
+    border-color: rgb(44, 44, 44);
+}
+
+body.manual-dark .pregled-tablica td {
+    color: rgb(216, 216, 216);
+    border-color: rgb(85, 85, 85);
+}
+
+body.manual-dark hr {
+    border-color: rgb(44, 44, 44);
+}
+
+
+
+body.manual-dark .opinion-box {
+    background-color: #1e1e1e;
+    color: #ddd;
+    border-radius: 6px;
+}
+
+body.manual-dark .opinion-box h3 {
+    color: #eeeeee;
+}
+
+body.manual-dark .opinion-box p {
+    color: #ccc;
+}
+
+body.manual-dark .opinion-box .disclaimer {
+    color: #888;
+}
+
+body.manual-dark .status-low {
+    background-color: #3a1c1c;
+    border-left: 4px solid #dc3545;
+}
+
+body.manual-dark .status-ok {
+    background-color: #3a2f1c;
+    border-left: 4px solid #ffc107;
+}
+
+body.manual-dark .status-good {
+    background-color: #1c3a3f;
+    border-left: 4px solid #17a2b8;
+}
+
+body.manual-dark .status-excellent {
+    background-color: #1c3a28;
+    border-left: 4px solid #28a745;
+}
+
+
+body.manual-dark .status-low h3 {
+    color: #dc3545;
+}
+
+body.manual-dark .status-ok h3 {
+    color: #ffc107;
+}
+
+body.manual-dark .status-good h3 {
+    color: #17a2b8;
+}
+
+body.manual-dark .status-excellent h3 {
+    color: #28a745;
 }
