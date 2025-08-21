@@ -1,8 +1,6 @@
 document.getElementById("dailyHours").addEventListener("input", updateMonthlyHours);
 document.getElementById("weekendWork").addEventListener("change", updateMonthlyHours);
 document.getElementById("calculateBtn").addEventListener("click", calculate);
-
-// Aktivacija valutnih tipki
 document.querySelectorAll(".currency-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".currency-btn").forEach(b => b.classList.remove("active"));
@@ -283,8 +281,6 @@ const yearlyHTML = `
 
 function getOpinion(netAvailable, netHourlyRate, currency) {
   const symbol = getCurrencySymbol(currency);
-
-  // Fiksni kursovi prema EUR
   const currencyToEUR = {
     EUR: 1,
     BAM: 0.511,
@@ -330,19 +326,16 @@ function getOpinion(netAvailable, netHourlyRate, currency) {
 }
 
 window.onload = function () {
-  // Dodaj dugme za promjenu teme
   const themeToggle = document.createElement("button");
   themeToggle.id = "themeToggle";
   themeToggle.innerText = "🌓";
   themeToggle.title = "Promijeni temu";
   document.body.appendChild(themeToggle);
 
-  // Učitaj prethodni izbor iz localStorage
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("manual-dark");
   }
 
-  // Toggle i spremi izbor
   themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("manual-dark");
     const mode = document.body.classList.contains("manual-dark") ? "dark" : "light";
